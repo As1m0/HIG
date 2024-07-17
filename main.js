@@ -64,7 +64,7 @@ const menu = [
       {
         label: 'Quit',
         click: () => app.quit(),
-        accellerator: 'Cmd+W',
+        accellerator: 'Cmd+w',
       }
     ]
   }
@@ -318,5 +318,5 @@ async function cropWhiteSpace(inputPath) {
 
 
 //Make .app extension from the project:
-//npx electron-packager . --platform=darwin --arch=x64 --out=dist --overwrite
-//npx electron-packager . --platform=win32 --arch=x64
+//1. npx electron-packager . --platform=darwin --arch=x64 --out=dist --overwrite
+//2. npx electron-packager . HeroGenerator --platform=darwin --arch=x64 --out=dist --overwrite --asar
