@@ -195,7 +195,7 @@ async function generateImages({ masterImagePath, directoryPath, outPutParameters
       let outputFileName = "";
       if (EAN) {
         const zeroNumber = countZeros(originalFileName);
-        outputFileName = file.substring(0, 16).slice(zeroNumber).replace(/-T.*/, '').split('_')[0].split('.')[0] + '.' + outPutParameters[2];
+        outputFileName = file.substring(0, 16).slice(zeroNumber).split('_')[0].split('.')[0].split('-')[0] + '.' + outPutParameters[2];
         outputPath = path.join(outputFolderPath, outputFileName);
       } else {
         outputPath = path.join(outputFolderPath, originalFileName.slice(0, originalFileName.lastIndexOf('_temp')) + '.' + outPutParameters[2]);
