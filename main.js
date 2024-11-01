@@ -247,6 +247,7 @@ async function resizeAndConvertToPng(directoryPath, outputParameters) {
 
     await sharp(inputImagePath)
       .resize(...outputParameters)
+      .flatten({ background: { r: 255, g: 255, b: 255 } })
       .png({ compressionLevel: 5, force: true, quality: 100 })
       .toFile(outputPngPath);
 
